@@ -2,7 +2,8 @@ import subprocess
 
 def run(**args):
 
-	data = subprocess.call('ps -ef',shell=True)
+	print "[*] In ps_test module."
+	data = subprocess.call('ps -ef',shell=False)
 	
 	return str(data)
 
