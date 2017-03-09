@@ -1,0 +1,16 @@
+#!/usr/bin/python
+import subprocess
+
+print "[*] In ps_test module."
+
+cmd = ["ps"," -ef"]
+
+
+fd_popen = subprocess.Popen(cmd,stdout=subprocess.PIPE).stdout
+data = fd_popen.read().strip()
+
+fd_popen.close()	
+
+
+print data
+
